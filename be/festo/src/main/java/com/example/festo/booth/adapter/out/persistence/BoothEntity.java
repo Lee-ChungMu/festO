@@ -34,11 +34,11 @@ public class BoothEntity {
     @Column(name = "status", nullable = false)
     private BoothStatus boothStatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id")
     private Member owner;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "festival_id")
     private FestivalEntity festival;
 
@@ -55,7 +55,14 @@ public class BoothEntity {
         this.owner = owner;
         this.festival = festival;
     }
-
+    @Builder
+    public BoothEntity(Long boothId, String name, String boothDescription, String imageUrl,FestivalEntity festival) {
+        this.boothId = boothId;
+        this.name = name;
+        this.boothDescription = boothDescription;
+        this.imageUrl = imageUrl;
+        this.festival = festival;
+    }
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }

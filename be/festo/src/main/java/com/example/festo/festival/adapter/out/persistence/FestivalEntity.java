@@ -34,7 +34,7 @@ public class FestivalEntity {
     @Column(name = "status", nullable = false)
     private FestivalStatus festivalStatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "manager_id")
     private Member manager;
 
