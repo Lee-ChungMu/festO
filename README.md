@@ -4,6 +4,7 @@
 
 <br /> 
 
+
 ## 📱 프로젝트 소개
 
 [개요] 기다림 없는 축제를 위한 스마트 오더 앱
@@ -25,7 +26,7 @@ BackEnd
 
 - Java 17
 - Spring boot 3.0
-- Spring Sequrity
+- Spring Security
 - Spring Data JPA
 
 DB
