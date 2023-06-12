@@ -27,7 +27,7 @@ public class ProductEntity {
 
     private String imageUrl;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "booth_id", nullable = false)
     private BoothEntity booth;
 
